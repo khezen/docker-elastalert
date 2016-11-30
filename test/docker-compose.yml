@@ -1,5 +1,18 @@
 version: '2'
 services:
     elastalert:
+        external_links:
+            - dockerelk_elasticsearch_1:elasticsearch
+    
         build: ..
-        network_mode: bridge
+        environment:
+            ELASTICSEARCH_HOST: elasticsearch
+            ELASTICSEARCH_PORT: 9200
+            ELASTALERT_USER: elastic
+        networks:
+            - elk
+        restart: unless-stopped
+networks:
+    elk:
+        external:
+            name: dockerelk_elk

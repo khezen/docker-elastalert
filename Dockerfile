@@ -16,4 +16,4 @@ ENV ELASTALERT_USER="elastalert" \
     ELASTICSEARCH_PORT="9200"
 
 ENTRYPOINT ["/run/entrypoint.sh"]
-CMD ["python","/elastalert/elastalert/elastalert.py", "--config /etc/elastalert/elastalert.yml", "--verbose"]
+CMD ["python","/elastalert/elastalert/elastalert.py", "--config /etc/elastalert/elastalert.yml"]

@@ -1,8 +1,9 @@
 #!/bin/bash
 
 set -m
-/run/miscellaneous/restore_config.sh
-/run/miscellaneous/edit_config.sh
+/run/config/restore_config.sh
+/run/config/edit_config.sh
+/run/config/es_index.sh
 $@ &
 
 fg
