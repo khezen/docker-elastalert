@@ -33,8 +33,7 @@ services:
     elastalert:
         image: khezen/elastalert
         environment:
-            ELASTALERT_USER: elastalert
-            ELASTALERT_PWD: changeme
+            ELASTIC_PWD: changeme
             ELASTICSEARCH_HOST: localhost
             ELASTICSEARCH_PORT: 9200
         volumes:
@@ -84,8 +83,7 @@ services:
             - elasticsearch
         image: khezen/elastalert
         environment:
-            ELASTALERT_USER: elastalert
-            ELASTALERT_PWD: jdilla
+            ELASTIC_PWD: changeme
             ELASTICSEARCH_HOST: elasticsearch
             ELASTICSEARCH_PORT: 9200
         volumes:
@@ -97,11 +95,8 @@ services:
 ```
 # Environment Variables
 
-##### ELASTALERT_USER | `(empty by default)`
-Elasticsearch user for elastalert. If left empty: authentication is not defined in configuration file.
-
-##### ELASTALERT_PWD | `changeme`
-password for elasticsearch user **ELASTALERT_USER**.
+##### ELASTIC_PWD | `changeme`
+password for elasticsearch built-in user `elastic`.
 
 ##### ELASTICSEARCH_HOST | `elasticsearch`
 Elasticsearch hostname.

@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # CREDENTIALS
-if [ "$ELASTALERT_USER" != "" ]; then
-    sed -ri "s/es_username:[^\r\n]*/es_username: $ELASTALERT_USER/" /etc/elastalert/elastalert.yml
-    sed -ri "s/es_password:[^\r\n]*/es_password: $ELASTALERT_PWD/" /etc/elastalert/elastalert.yml
+if [ "$ELASTIC_PWD" != "" ]; then
+    sed -ri "s/#es_username:[^\r\n]*/es_username: elastic/" /etc/elastalert/elastalert.yml
+    sed -ri "s/#es_password:[^\r\n]*/es_password: $ELASTIC_PWD/" /etc/elastalert/elastalert.yml
 fi
 
 # ELASTICSEARCH URL

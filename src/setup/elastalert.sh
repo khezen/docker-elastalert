@@ -2,7 +2,7 @@
 
 # misc
 apt-get update
-apt-get install build-essential binutils python python-dev python-pip git -y
+apt-get install build-essential python python-dev python-pip git -y
 
 #elastalert
 git clone https://github.com/Yelp/elastalert.git /elastalert
