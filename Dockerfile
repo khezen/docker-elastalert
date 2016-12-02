@@ -15,4 +15,4 @@ RUN mkdir /.backup
 RUN /run/setup/elastalert.sh
 
 ENTRYPOINT ["/run/entrypoint.sh"]
-CMD ["python","/elastalert/elastalert/elastalert.py", "--config /etc/elastalert/elastalert.yml"]
+CMD ["python","/elastalert/elastalert/elastalert.py", "--config /etc/elastalert/elastalert.yml", "--verbose"]

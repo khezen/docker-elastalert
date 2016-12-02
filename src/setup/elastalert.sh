@@ -2,14 +2,18 @@
 
 # misc
 apt-get update
-apt-get install build-essential python python-dev python-pip git -y
+apt-get install git wget build-essential python python-pip python-dev -y
+wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+pip install --upgrade pip
+pip install --upgrade six
 
 #elastalert
 git clone https://github.com/Yelp/elastalert.git /elastalert
 cd /elastalert
-#git checkout tags/v0.1.4
-pip install -r requirements.txt
-pip install -e .
+git checkout support_es5
 python setup.py install
-
+pip install requirements.txt
 cp -f config.yaml.example /.backup/elastalert.yml
+
+# purge
+
