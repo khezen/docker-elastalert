@@ -12,8 +12,8 @@ git clone https://github.com/Yelp/elastalert.git /elastalert
 cd /elastalert
 git checkout support_es5
 python setup.py install
-pip install requirements.txt
+pip install -r requirements.txt
 cp -f config.yaml.example /.backup/elastalert.yml
 
 # purge
-
+apt-get remove git wget build-essential python-pip python-dev -y
