@@ -3,6 +3,7 @@
 # Supported tags and respective `Dockerfile` links
 
 `latest` [(Dockerfile)](https://github.com/Khezen/docker-elastalert/Dockerfile)
+`support_es5` [(Dockerfile)](https://github.com/Khezen/docker-elastalert/blob/support_es5/Dockerfile)
 
 # What is Elastalert?
 [ElastAlert](https://github.com/Yelp/elastalert) is a simple framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch.
