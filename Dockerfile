@@ -7,6 +7,7 @@ ENV ELASTIC_PWD="changeme" \
     ELASTICSEARCH_HOST="elasticsearch" \
     ELASTICSEARCH_PORT="9200"
 
+RUN apt-get update -y && apt-get install curl -y
 ADD ./src/ /run/
 RUN chmod +x -R /run/
 
