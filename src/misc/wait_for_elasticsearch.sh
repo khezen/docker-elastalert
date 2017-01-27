@@ -8,3 +8,4 @@ while [[ RET -ne 0 ]]; do
   RET=$?
   sleep 5
 done
+sleep 20
