@@ -50,7 +50,7 @@ or
 version: '2'
 services:
     elasticsearch:
-        image: khezen/elasticsearch
+        image: khezen/elasticsearch:2
         environment:
             ELASTIC_PWD: changeme
             KIBANA_PWD: brucewayne
@@ -66,11 +66,11 @@ services:
 
     kibana:
         links:
-            - elasticsearch
-        image: khezen/kibana:5
+            - elasticsearch:elasticsearch-0
+        image: khezen/kibana:4
         environment:
             KIBANA_PWD: brucewayne
-            ELASTICSEARCH_HOST: elasticsearch
+            ELASTICSEARCH_HOST: elasticsearch-0
             ELASTICSEARCH_PORT: 9200
         volumes:
             - /etc/kibana:/etc/kibana
@@ -81,11 +81,11 @@ services:
     
     elastalert:
         links:
-            - elasticsearch
+            - elasticsearch:elasticsearch-0
         image: khezen/elastalert
         environment:
             ELASTIC_PWD: changeme
-            ELASTICSEARCH_HOST: elasticsearch
+            ELASTICSEARCH_HOST: elasticsearch-0
             ELASTICSEARCH_PORT: 9200
         volumes:
             - /etc/elastalert:/etc/elastalert
