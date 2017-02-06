@@ -3,7 +3,6 @@
 # Supported tags and respective `Dockerfile` links
 
 * `latest` [(Dockerfile)](https://github.com/Khezen/docker-elastalert/Dockerfile)
-* `support_es5` [(Dockerfile)](https://github.com/Khezen/docker-elastalert/blob/support_es5/Dockerfile)
 
 # What is Elastalert?
 [ElastAlert](https://github.com/Yelp/elastalert) is a simple framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch.
@@ -57,7 +56,7 @@ services:
             BEATS_PWD: jdilla
         volumes:
             - /data/elasticsearch:/usr/share/elasticsearch/data
-            - /etc/elasticsearch:/usr/share/elasticsearch/config 
+            - /etc/elasticsearch:/usr/share/elasticsearch/config
         ports:
              - "9200:9200"
              - "9300:9300"
@@ -78,7 +77,7 @@ services:
              - "5601:5601"
         network_mode: bridge
         restart: unless-stopped
-    
+
     elastalert:
         links:
             - elasticsearch:elasticsearch-0
