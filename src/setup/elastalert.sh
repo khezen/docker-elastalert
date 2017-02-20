@@ -9,6 +9,7 @@ pip install --upgrade six
 
 #elastalert
 git clone https://github.com/Yelp/elastalert.git /elastalert
+git checkout tags/v0.1.8
 cd /elastalert
 python setup.py install
 pip install -r requirements.txt
