@@ -112,7 +112,7 @@ You can find help with elastalert configuration [here](https://elastalert.readth
 
 # Share alert rules from host
 
-You can share rules from host to the container by adding them to `/usr/share/elastalert/rules` if you follow the same volume mapping as in docker-compose exammples above.
+You can share rules from host to the container by adding them to `/usr/share/elastalert/rules` if you follow the same volume mapping as in docker-compose examples above.
 
 # User Feedback
 ## Issues
